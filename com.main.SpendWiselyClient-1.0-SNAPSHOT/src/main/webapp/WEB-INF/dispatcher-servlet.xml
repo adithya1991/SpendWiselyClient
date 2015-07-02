@@ -11,17 +11,17 @@
 	
 	<mvc:annotation-driven/>
 	
-<!-- 	<bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
-<!-- 	<property name="prefix"><value>/WEB-INF/</value></property> -->
-<!-- 	<property name="suffix"><value>.html</value></property> -->
-<!-- 	</bean> -->
+	<bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix"><value>/WEB-INF/</value></property>
+	<property name="suffix"><value>.html</value></property>
+	</bean>
 	
 	<context:annotation-config/>
 	<context:component-scan base-package="com.main.SpendWisely.Client.**"></context:component-scan>
 	
-	<mvc:view-controller path="/index" view-name="/index.html"/>
+<!-- 	<mvc:view-controller path="/index" view-name="/index.html"/> -->
 	
-	
+	<mvc:resources location="/WEB-INF/partials/" mapping="/partials/**"/>
 	
 	<mvc:default-servlet-handler/>
 </beans>

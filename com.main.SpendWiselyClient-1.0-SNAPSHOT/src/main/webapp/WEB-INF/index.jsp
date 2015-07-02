@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,27 +8,33 @@
 	
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
-	<script src="resources/js/angular-strap/angular-strap.min.js"></script>
-<script src="resources/js/angular-strap/angular-strap.tpl.min.js"></script>
-
-<script src="resources/js/bootstrap-ui/ui-bootstrap-tpls-0.11.0.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="resources/js/highcharts/highstock.js"></script>
-<script src="resources/js/highcharts/exporting.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-animate.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-cookies.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-sanitize.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-resource.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	
 <meta charset="ISO-8859-1">
 <title>SpendWiselyIndex</title>
 </head>
-<body ng-app>
+<body>
 
 
-<div ng-include src="'home.html'"></div>
+<!-- <div ng-include src="'./partials/home.html'"></div> -->
+
+<div>
+
+
+<form:form name="login" action="/login" method="post">
+<label>UserName</label><input type="text" id="username" name="username"/>
+<label>Password</label><input type="text" id="username" name="username" hidden="true"/>
+<input id="submit" type="submit" name="submit" value="Login">
+
+</form:form>
+</div>
+
+
 </body>
 </html>
